@@ -1,2 +1,2 @@
-![SHOWCASE!](.showcase/searchbar.png)
-![SHOWCASE2!](.showcase/outcome.png)
+![SHOWCASE!](showcase/searchbar.png)
+![SHOWCASE2!](showcase/outcome.png)
