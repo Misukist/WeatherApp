@@ -12,7 +12,7 @@ body {
 #weather-container {
     background-color: rgba(255, 255,255,0.1);
     color: aliceblue;
-    padding: 25px 20px 50px;
+    padding: 25px 20px 45px;
     border-radius: 30px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -77,6 +77,35 @@ button:hover {
     border-color: #7c478f;
 }
 
+#temp {
+    font-size: 40px;
+    box-sizing: border-box;
+    display: "none";
+    color: rgba(255, 255, 255, 0.808);
+}
+
+#weather {
+    font-size: 20px;
+    box-sizing: border-box;
+    display: none;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+#forecast {
+    font-size: 20px;
+    box-sizing: border-box;
+    margin-top:45px;
+    display: none;
+    color: rgba(255, 255, 255, 0.808);
+}
+
+#weather-icon {
+    width: 150px;  /* Muuttaa kuvan leveyden 200 pikseliksi */
+    height: auto;
+    box-sizing: border-box;
+    display: none;
+}
+
 /* 📱 Mobiiliversio */
 @media (max-width: 600px) {
     #weather-container {
@@ -99,4 +128,5 @@ button:hover {
         width: 100%;
         padding: 10px;
     }
+
 }

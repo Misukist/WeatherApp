@@ -1,8 +1,8 @@
 async function haeSaa() {
     const kaupunki = document.getElementById("city").value.trim();
-    const apiKey = "MyAPi";
+    const apiKey = "";
     if (!kaupunki) {
-        alert("Syötä kaupungin nimi!");
+        alert("Syötä kaupungin nimi englanniksi!");
         return;
     }
 
@@ -13,15 +13,21 @@ async function haeSaa() {
         if (!response.ok) throw new Error("Kaupunkia ei löytynyt");
 
         const data = await response.json();
+        
 
-        document.getElementById("temp").innerText = `Lämpötila: ${data.main.temp}°C`;
-        document.getElementById("weather").innerText = `Sää: ${data.weather[0].description}`;
+        document.getElementById("temp").innerText = `${data.main.temp}°C`;
+        document.getElementById("weather").innerText = `${data.weather[0].description}`;
         document.getElementById("forecast").innerText = `Tuuli: ${data.wind.speed} m/s`;
+
+        document.getElementById("temp").style.display = "block";
+        document.getElementById("weather").style.display = "block";
+        document.getElementById("forecast").style.display = "block";
 
         const iconCode = data.weather[0].icon;
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
         document.getElementById("weather-icon").src = iconUrl;
         document.getElementById("weather-icon").alt = data.weather[0].description;
+        document.getElementById("weather-icon").style.display = "block";
 
     } catch (error) {
         document.getElementById("temp").innerText = "";
