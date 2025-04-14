@@ -1,6 +1,6 @@
 async function haeSaa() {
     const kaupunki = document.getElementById("city").value.trim();
-    const apiKey = "";
+    const apiKey = ""; //add your own API key :3 
     if (!kaupunki) {
         alert("Syötä kaupungin nimi englanniksi!");
         return;
@@ -29,6 +29,9 @@ async function haeSaa() {
         document.getElementById("weather-icon").alt = data.weather[0].description;
         document.getElementById("weather-icon").style.display = "block";
 
+        document.getElementById("sky").style.display="block";
+        document.getElementById("wind").style.display="block";
+
     } catch (error) {
         document.getElementById("temp").innerText = "";
         document.getElementById("weather").innerText = "";
@@ -37,4 +40,3 @@ async function haeSaa() {
         alert(error.message);
     }
 }
-//viesti tulevaisuuteen

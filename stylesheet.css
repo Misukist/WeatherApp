@@ -45,6 +45,11 @@ input {
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 15px;
+    /* Background image solution */
+    background-image: url('icons/search.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 24px 24px; 
 }
 
 input::placeholder {
@@ -77,30 +82,57 @@ button:hover {
     border-color: #7c478f;
 }
 
+#vasen {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    padding-top: 1px;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 20px;
+}
+
+
 #temp {
     font-size: 40px;
     box-sizing: border-box;
-    display: "none";
+    display: none;
     color: rgba(255, 255, 255, 0.808);
+    padding-bottom: 20px;
 }
 
-#weather {
+#weather, #forecast {
     font-size: 20px;
     box-sizing: border-box;
     display: none;
     color: rgba(255, 255, 255, 0.87);
+    padding-top: 20px;
 }
 
-#forecast {
-    font-size: 20px;
-    box-sizing: border-box;
-    margin-top:45px;
-    display: none;
-    color: rgba(255, 255, 255, 0.808);
+#sky {
+    width: 50px;
+    height: auto;
+    display: none; 
+    padding-top: 10px;
+    opacity: 0.8;
+}
+
+#wind {
+    width: 50px;
+    height: auto;
+    display: none; 
+    padding-top: 20px;
+    opacity: 0.8;
 }
 
 #weather-icon {
-    width: 150px;  /* Muuttaa kuvan leveyden 200 pikseliksi */
+    width: 150px;  
     height: auto;
     box-sizing: border-box;
     display: none;
@@ -129,4 +161,29 @@ button:hover {
         padding: 10px;
     }
 
+    #vasen {
+        flex-direction: row;
+        gap: 15px; /* pienempi väli pystysuunnassa mobiilissa */
+        align-items: center; /* keskittää sisällön */
+    }
+    
+    .info {
+        justify-content: center; /* keskittää kuvake + teksti */
+        font-size: 18px;
+    }
+    
+    #sky, #wind {
+        width: 35px; /* pienempi kuvake mobiilissa */
+    }
+    
+    #weather-icon {
+        width: 120px; /* sääkuva myös hieman pienempi */
+    }
+    
+    #temp {
+        font-size: 32px;
+    }
+    
+
 }
+
